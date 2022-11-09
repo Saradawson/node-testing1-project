@@ -98,12 +98,14 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    if(this.season === ''){
+    if(this.season === '' || this.season === 'spring'){
       return this.season = 'summer'
     }else if(this.season === 'summer'){
       return this.season = 'fall'
     }else if(this.season === 'fall'){
       return this.season = 'winter'
+    }else if(this.season === 'winter'){
+      return this.season = 'spring'
     }
   }
 }

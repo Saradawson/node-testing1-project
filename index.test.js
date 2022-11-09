@@ -75,8 +75,20 @@ describe('[Exercise 5] Seasons', () => {
     seasons.next()
     expect(seasons.next()).toBe('winter')
   })
-  // test('[12] the FOURTH call of seasons.next returns "spring"', () => {})
-  // test('[13] the FIFTH call of seasons.next returns again "summer"', () => {})
+  test('[12] the FOURTH call of seasons.next returns "spring"', () => {
+    seasons.next()
+    seasons.next()
+    seasons.next()
+    expect(seasons.next()).toBe('spring')
+  })
+  test('[13] the FIFTH call of seasons.next returns again "summer"', () => {
+    seasons.next()
+    seasons.next()
+    seasons.next()
+    seasons.next()
+    expect(seasons.next()).toBe('summer')
+
+  })
   // test('[14] the 40th call of seasons.next returns "spring"', () => {})
 })
 
