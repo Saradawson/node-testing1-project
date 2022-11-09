@@ -102,6 +102,8 @@ class Seasons {
       return this.season = 'summer'
     }else if(this.season === 'summer'){
       return this.season = 'fall'
+    }else if(this.season === 'fall'){
+      return this.season = 'winter'
     }
   }
 }
