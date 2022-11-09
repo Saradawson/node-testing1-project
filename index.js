@@ -82,7 +82,7 @@ class Seasons {
    * [Exercise 5A] Seasons creates a seasons object
    */
   constructor() {
-    this.season = 'summer'
+    this.season = ''
   }
 
   /**
@@ -98,7 +98,9 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    
+    if(this.season === ''){
+      return this.season = 'summer'
+    }
   }
 }
 
