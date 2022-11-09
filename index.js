@@ -82,7 +82,9 @@ class Seasons {
    * [Exercise 5A] Seasons creates a seasons object
    */
   constructor() {
-    this.season = ''
+    this.seasons = ['summer', 'fall', 'winter', 'spring']
+    this.currentSeason = 0
+
   }
 
   /**
@@ -98,16 +100,14 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    if(this.season === '' || this.season === 'spring'){
-      return this.season = 'summer'
-    }else if(this.season === 'summer'){
-      return this.season = 'fall'
-    }else if(this.season === 'fall'){
-      return this.season = 'winter'
-    }else if(this.season === 'winter'){
-      return this.season = 'spring'
+    const result = this.seasons[this.currentSeason]
+    if(this.currentSeason === 3){
+      this.currentSeason = 0
+    }else{
+      this.currentSeason++
     }
-  }
+    return result
+}
 }
 
 class Car {
