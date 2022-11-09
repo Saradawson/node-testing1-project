@@ -100,6 +100,8 @@ class Seasons {
   next() {
     if(this.season === ''){
       return this.season = 'summer'
+    }else if(this.season === 'summer'){
+      return this.season = 'fall'
     }
   }
 }
